@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validator</title>
+    <style>
+    #green-box{
+        background: green;
+        color: whitesmoke;
+    }
+    </style>
+</head>
+<body>
+    <div id="green-box">
+        <h1>{{message}}</h1>
+    </div>
+        <h4>Usernames entered</h4>
+        <table>
+            {% for user in list %}
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>{{user.created_at}}</td>
+                    <td><a href="delete/{{user.id}}">Remove</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    <br>
+    <a href="back">Go Back</a>
+</body>
+</html>
